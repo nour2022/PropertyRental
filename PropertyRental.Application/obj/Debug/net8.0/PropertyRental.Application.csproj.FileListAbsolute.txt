@@ -1,0 +1,17 @@
+C:\Users\User\source\PropertyRental\PropertyRental.Application\bin\Debug\net8.0\PropertyRental.Application.deps.json
+C:\Users\User\source\PropertyRental\PropertyRental.Application\bin\Debug\net8.0\PropertyRental.Application.dll
+C:\Users\User\source\PropertyRental\PropertyRental.Application\bin\Debug\net8.0\PropertyRental.Application.pdb
+C:\Users\User\source\PropertyRental\PropertyRental.Application\bin\Debug\net8.0\PropertyRental.Domain.dll
+C:\Users\User\source\PropertyRental\PropertyRental.Application\bin\Debug\net8.0\PropertyRental.Infrastructure.dll
+C:\Users\User\source\PropertyRental\PropertyRental.Application\bin\Debug\net8.0\PropertyRental.Domain.pdb
+C:\Users\User\source\PropertyRental\PropertyRental.Application\bin\Debug\net8.0\PropertyRental.Infrastructure.pdb
+C:\Users\User\source\PropertyRental\PropertyRental.Application\obj\Debug\net8.0\PropertyRental.Application.csproj.AssemblyReference.cache
+C:\Users\User\source\PropertyRental\PropertyRental.Application\obj\Debug\net8.0\PropertyRental.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\PropertyRental\PropertyRental.Application\obj\Debug\net8.0\PropertyRental.Application.AssemblyInfoInputs.cache
+C:\Users\User\source\PropertyRental\PropertyRental.Application\obj\Debug\net8.0\PropertyRental.Application.AssemblyInfo.cs
+C:\Users\User\source\PropertyRental\PropertyRental.Application\obj\Debug\net8.0\PropertyRental.Application.csproj.CoreCompileInputs.cache
+C:\Users\User\source\PropertyRental\PropertyRental.Application\obj\Debug\net8.0\PropertyRental.Application.csproj.CopyComplete
+C:\Users\User\source\PropertyRental\PropertyRental.Application\obj\Debug\net8.0\PropertyRental.Application.dll
+C:\Users\User\source\PropertyRental\PropertyRental.Application\obj\Debug\net8.0\refint\PropertyRental.Application.dll
+C:\Users\User\source\PropertyRental\PropertyRental.Application\obj\Debug\net8.0\PropertyRental.Application.pdb
+C:\Users\User\source\PropertyRental\PropertyRental.Application\obj\Debug\net8.0\ref\PropertyRental.Application.dll
