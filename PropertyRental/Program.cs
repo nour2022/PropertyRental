@@ -12,6 +12,7 @@ using System;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using PropertyRental.Application.Hubs;
 var builder = WebApplication.CreateBuilder(args);
 var cultures = new[]
 {
@@ -33,23 +34,23 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionString"), b => b.MigrationsAssembly("PropertyRental.Infrastructure")));
+builder.Services.AddSignalR();
+builder.Services.AddIdentity<User, Role>(options =>
+{
+    {
+        // Password settings
+        options.Password.RequireDigit = true;
+        // Lockout settings
+        options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+        options.Lockout.MaxFailedAccessAttempts = 5;
+        options.Lockout.AllowedForNewUsers = true;
 
-builder.Services.AddIdentity<User, Role>(options => { 
-//{
-//    // Password settings
-//    options.Password.RequireDigit = true;
-   
+        // User settings
+        options.User.RequireUniqueEmail = true;
 
-//    // Lockout settings
-//    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
-//    options.Lockout.MaxFailedAccessAttempts = 5;
-//    options.Lockout.AllowedForNewUsers = true;
-
-//    // User settings
-//    options.User.RequireUniqueEmail = true;
-
-//    // Sign-in settings
-//    options.SignIn.RequireConfirmedEmail = true;
+        // Sign-in settings
+        options.SignIn.RequireConfirmedEmail = true;
+    }
 })
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
@@ -76,6 +77,7 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 builder.Services.AddScoped<PropertyAppService>();
 builder.Services.AddScoped<PaymentService>();
+builder.Services.AddScoped<ChatService>();
 builder.Services.AddScoped<PayPalService>();
 builder.Services.AddScoped<LeaseAgreementAppService>();
 builder.Services.AddScoped<UserAppService>();
@@ -103,5 +105,5 @@ app.UseAuthentication(); // Enable authentication
 app.UseAuthorization();  // Enable authorization
 
 app.MapControllers();
-
+app.MapHub<ChatHub>("/chatHub");
 app.Run();

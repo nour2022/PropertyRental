@@ -10,6 +10,7 @@ namespace PropertyRental.Infrastructure.Data
 {
     public class AppDbContext : IdentityDbContext<User, Role, int>
     {
+        public DbSet<ChatMassege> ChatMasseges { get; set; }
         public DbSet<Property> Properties { get; set; }
         public DbSet<LeaseAgreement> LeaseAgreements { get; set; }
         public DbSet<Payment> Payments { get; set; }
@@ -177,7 +178,12 @@ namespace PropertyRental.Infrastructure.Data
                 new IdentityUserRole<int> { UserId = 2, RoleId = 2 }, // Owner User to Owner Role
                 new IdentityUserRole<int> { UserId = 3, RoleId = 3 }  // Tenant User to Tenant Role
             );
+            modelBuilder.Entity<ChatMassege>()
+         .HasKey(cm => cm.Id);
 
+            modelBuilder.Entity<ChatMassege>()
+                .Property(cm => cm.Message)
+                .IsRequired();
 
             modelBuilder.Entity<LeaseAgreement>()
                 .Property(l => l.MonthelyRent)

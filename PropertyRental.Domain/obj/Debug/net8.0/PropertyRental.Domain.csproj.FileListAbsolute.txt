@@ -10,3 +10,16 @@ C:\Users\User\source\PropertyRental\PropertyRental.Domain\obj\Debug\net8.0\Prope
 C:\Users\User\source\PropertyRental\PropertyRental.Domain\obj\Debug\net8.0\refint\PropertyRental.Domain.dll
 C:\Users\User\source\PropertyRental\PropertyRental.Domain\obj\Debug\net8.0\PropertyRental.Domain.pdb
 C:\Users\User\source\PropertyRental\PropertyRental.Domain\obj\Debug\net8.0\ref\PropertyRental.Domain.dll
+C:\Users\User\source\repos\PropertyRental\PropertyRental.Domain\bin\Debug\net8.0\PropertyRental.Domain.deps.json
+C:\Users\User\source\repos\PropertyRental\PropertyRental.Domain\bin\Debug\net8.0\PropertyRental.Domain.dll
+C:\Users\User\source\repos\PropertyRental\PropertyRental.Domain\bin\Debug\net8.0\PropertyRental.Domain.pdb
+C:\Users\User\source\repos\PropertyRental\PropertyRental.Domain\obj\Debug\net8.0\PropertyRental.Domain.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\PropertyRental\PropertyRental.Domain\obj\Debug\net8.0\PropertyRental.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\PropertyRental\PropertyRental.Domain\obj\Debug\net8.0\PropertyRental.Domain.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\PropertyRental\PropertyRental.Domain\obj\Debug\net8.0\PropertyRental.Domain.AssemblyInfo.cs
+C:\Users\User\source\repos\PropertyRental\PropertyRental.Domain\obj\Debug\net8.0\PropertyRental.Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\PropertyRental\PropertyRental.Domain\obj\Debug\net8.0\PropertyRental.Domain.sourcelink.json
+C:\Users\User\source\repos\PropertyRental\PropertyRental.Domain\obj\Debug\net8.0\PropertyRental.Domain.dll
+C:\Users\User\source\repos\PropertyRental\PropertyRental.Domain\obj\Debug\net8.0\refint\PropertyRental.Domain.dll
+C:\Users\User\source\repos\PropertyRental\PropertyRental.Domain\obj\Debug\net8.0\PropertyRental.Domain.pdb
+C:\Users\User\source\repos\PropertyRental\PropertyRental.Domain\obj\Debug\net8.0\ref\PropertyRental.Domain.dll

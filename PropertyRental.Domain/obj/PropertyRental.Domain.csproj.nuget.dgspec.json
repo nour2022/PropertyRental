@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\PropertyRental\\PropertyRental.Domain\\PropertyRental.Domain.csproj": {}
+    "C:\\Users\\User\\source\\repos\\PropertyRental\\PropertyRental.Domain\\PropertyRental.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\PropertyRental\\PropertyRental.Domain\\PropertyRental.Domain.csproj": {
+    "C:\\Users\\User\\source\\repos\\PropertyRental\\PropertyRental.Domain\\PropertyRental.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\PropertyRental\\PropertyRental.Domain\\PropertyRental.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\PropertyRental\\PropertyRental.Domain\\PropertyRental.Domain.csproj",
         "projectName": "PropertyRental.Domain",
-        "projectPath": "C:\\Users\\User\\source\\PropertyRental\\PropertyRental.Domain\\PropertyRental.Domain.csproj",
+        "projectPath": "C:\\Users\\User\\source\\repos\\PropertyRental\\PropertyRental.Domain\\PropertyRental.Domain.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\PropertyRental\\PropertyRental.Domain\\obj\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\PropertyRental\\PropertyRental.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
