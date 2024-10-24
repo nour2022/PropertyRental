@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 [Route("api/[controller]")]
@@ -13,6 +14,7 @@ public class ChatController : ControllerBase
     }
 
     // POST: api/chat/send
+    [Authorize(Roles ="Owner" +","+"Tenant")]
     [HttpPost("send")]
    
     public async Task<IActionResult> SendMessage([FromBody] ChatMassegeDTO chatMessageDto)

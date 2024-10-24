@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PropertyRental.Application.DTOs;
 using PropertyRental.Application.Services;
@@ -24,6 +25,7 @@ namespace PropertyRental.API.Controllers
 
 
         // GET: LeaseAgreementController/Create
+        [Authorize(Roles = "Owner")]
         [HttpPost]
         public ActionResult Create([FromBody]LeaseAgreementDTO leaseAgreementDTO)
         {
@@ -34,6 +36,7 @@ namespace PropertyRental.API.Controllers
 
 
         // GET: LeaseAgreementController/Edit/5
+        [Authorize(Roles = "Owner")]
         [HttpPut("{id}")]
         public ActionResult Edit(int id, [FromBody] LeaseAgreementDTO leaseAgreementDTO)
         {
@@ -44,6 +47,7 @@ namespace PropertyRental.API.Controllers
 
 
         // GET: LeaseAgreementController/Delete/5
+        [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {

@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using PropertyRental.Application.DTOs;
 using PropertyRental.Application.Services;
 using PropertyRental.Domain.Entities.User;
+using System.Data;
 
 namespace PropertyRental.API.Controllers
 {
@@ -21,6 +23,8 @@ namespace PropertyRental.API.Controllers
             _roleManager = roleManager;
             _userManager = userManager;
         }
+
+        [Authorize(Roles = "Admin")]
         [HttpGet("{id}")]
         public IActionResult GetUser(int id)
         {
@@ -35,17 +39,21 @@ namespace PropertyRental.API.Controllers
             return Ok();
         
         }
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public IActionResult GetAll()
         {
             return Ok(_userService.GetAll());
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost("{id}")]
+
         public IActionResult Delete(int id)
         {
             _userService.Delete(id);
             return Ok();
         }
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<ActionResult> AddUser([FromBody]UserDTO user)
         {

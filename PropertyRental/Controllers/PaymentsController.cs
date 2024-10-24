@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace PropertyRental.API.Controllers
 {
@@ -12,7 +13,7 @@ namespace PropertyRental.API.Controllers
         {
             _payPalService = payPalService;
         }
-
+        [Authorize(Roles = "Tenant")]
         [HttpPost("create")]
         public IActionResult CreatePayment(decimal amount)
         {
@@ -34,7 +35,7 @@ namespace PropertyRental.API.Controllers
             }
             return BadRequest("Payment failed.");
         }
-
+       
         [HttpGet("cancel")]
         public IActionResult Cancel()
         {

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PropertyRental.Application.DTOs;
 using PropertyRental.Application.Services;
@@ -16,6 +17,7 @@ namespace PropertyRental.API.Controllers
             
         }
         // GET: PropertyController
+        [Authorize(Roles = "Owner")]
         [HttpGet("api/Property")]
         public ActionResult GetAll()
         {
@@ -31,6 +33,7 @@ namespace PropertyRental.API.Controllers
         }
 
         // Post: PropertyController/Create
+        [Authorize(Roles = "Owner")]
         [HttpPost]
         public ActionResult Create([FromBody]PropertyDTO propertyDTO)
         {
@@ -42,6 +45,7 @@ namespace PropertyRental.API.Controllers
 
 
         // GET: PropertyController/Edit/5
+        [Authorize(Roles = "Owner")]
         [HttpPut("{id}")]
         public ActionResult Edit(int id, [FromBody] PropertyDTO propertyDTO)
         {
@@ -51,12 +55,14 @@ namespace PropertyRental.API.Controllers
 
 
         // GET: PropertyController/Delete/5
+        [Authorize(Roles = "Admin")]
         [HttpPost("{id}")]
         public ActionResult Delete(int id)
         {
             _propertyService.Delete(id);
             return Ok();
         }
+        [Authorize(Roles = "Tenant")]
         [HttpGet("api/Property/Available")]
         public ActionResult GetAvailable()
         {
